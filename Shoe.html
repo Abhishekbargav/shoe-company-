@@ -1,0 +1,117 @@
+
+<html>
+
+<head>
+    
+    <title>Shoe Company</title>
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+</head>
+
+<body>
+  <body class="bg-blue-500 font-sans text-white">  
+<header class="container mx-auto px-4 py-5">
+        <nav class="flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Shoes Brand's</h1>
+            <ul class="flex space-x-4">
+                <li><a href="https://crepdogcrew.com/account/login" class="hover:text-zinc-200">Home</a></li>
+                <li><a href="https://crepdogcrew.com/pages/about-page" class="hover:text-zinc-200">About</a></li>
+                <li><a href="https://crepdogcrew.com/products/cdc-gift-card" class="hover:text-zinc-200">Gift Card</a></li>
+                <li><a href="https://crepdogcrew.com/blogs/articles" class="hover:text-zinc-200">Blog</a></li>
+                <li><a href="https://crepdogcrew.com/pages/contact" class="hover:text-zinc-200">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container mx-auto px-4">
+        <div class="text-center py-20">
+            <h2 class="text-sm uppercase tracking-widest">Trending of the week</h2>
+            <h1 class="text-4xl font-bold my-2">Style's Shoes for Men</h1>
+            <div class="flex justify-center space-x-4 mt-4">
+               <a href="https://crepdogcrew.com/collections/air-jordan-mids"</a> <button class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">Shop Now</button>
+                <a href="https://www.libertyshoesonline.com/about-us"</a> <button class="bg-transparent border border-white hover:bg-white hover:text-blue-500 text-white font-bold py-2 px-4 rounded">Read More</button>
+            </div>
+        </div>
+    </div>
+
+		<img src="Air.png" alt="Your Image" align="center"> 
+<div class="container mx-auto px-4 pb-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div class="bg-white text-blue-500 p-4 rounded-lg">
+                <span class="block text-2xl">🚚</span>
+                <span class="block">Free Shipping</span>
+                <span class="block text-sm">On all order over $2000</span>
+            </div>
+            <div class="bg-white text-blue-500 p-4 rounded-lg">
+                <span class="block text-2xl">↩️</span>
+                <span class="block">Free Return</span>
+                <span class="block text-sm">On 1st exchange in 30 days</span>
+            </div>
+            <div class="bg-white text-blue-500 p-4 rounded-lg">
+                <span class="block text-2xl">👤</span>
+                <span class="block">Member Discount</span>
+                <span class="block text-sm">Register & save up to 52%</span>
+            </div>
+            <div class="bg-white text-blue-500 p-4 rounded-lg">
+                <span class="block text-2xl">💬</span>
+                <span class="block">Premium Support</span>
+                <span class="block text-sm">Support 24 hours per day</span>
+            </div>
+        </div>
+    </div>
+
+
+    <custom-header></custom-header>
+    <custom-main></custom-main>
+    <custom-footer></custom-footer>
+
+    <script>
+        // Shared Tailwind CSS classes
+        const hoverTextZinc = "hover:text-zinc-200";
+
+        // Header Component
+        class CustomHeader extends HTMLElement {
+            connectedCallback() {
+                this.innerHTML = `
+                    <header class="container mx-auto px-4 py-5">
+                        <nav class="flex justify-between items-center">
+                            <h1 class="text-3xl font-bold">Bootie</h1>
+                            <ul class="flex space-x-4">
+                                <li><a href="#" class="${hoverTextZinc}">Home</a></li>
+                                <li><a href="#" class="${hoverTextZinc}">About</a></li>
+                                <li><a href="#" class="${hoverTextZinc}">Blog</a></li>
+                                <li><a href="#" class="${hoverTextZinc}">Dropdown</a></li>
+                                <li><a href="#" class="${hoverTextZinc}">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+                `;
+            }
+        }
+        customElements.define('custom-header', CustomHeader);
+
+        // Main Component
+        class CustomMain extends HTMLElement {
+            connectedCallback() {
+                this.innerHTML = `
+                    <div class="container mx-auto px-4">
+                        <div class="text-center py-20">
+                            <h2 class="text-sm uppercase tracking-widest">Trending of the week</h2>
+                            <h1 class="text-4xl font-bold my-2">Casual Shoes for Men</h1>
+                            <div class="flex justify-center space-x-4 mt-4">
+                                <button class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">Shop Now</button>
+                                <button class="bg-transparent border border-white ${hoverTextZinc} text-white font-bold py-2 px-4 rounded">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+        
+</body>
+
+</html>
